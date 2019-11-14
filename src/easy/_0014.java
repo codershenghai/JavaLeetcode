@@ -1,6 +1,6 @@
 package easy;
 
-public class _014 {
+public class _0014 {
     private String longestCommonPrefix(String[] strs) {
         if(strs.length == 0)
             return "";
@@ -19,7 +19,7 @@ public class _014 {
     }
 
     public static void main(String[] args) {
-        _014 Sol = new _014();
+        _0014 Sol = new _0014();
         String res = Sol.longestCommonPrefix(new String[]{"flower","flow","flight"});
         System.out.println(res);
     }
