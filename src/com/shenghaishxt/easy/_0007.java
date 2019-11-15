@@ -1,6 +1,4 @@
-package easy;
-
-import javax.print.DocFlavor;
+package com.shenghaishxt.easy;
 
 public class _0007 {
     private int reverse(int x) {

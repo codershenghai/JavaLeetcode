@@ -1,4 +1,4 @@
-package easy;
+package com.shenghaishxt.easy;
 
 public class _0026 {
     // 快慢指针

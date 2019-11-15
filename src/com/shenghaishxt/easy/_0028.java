@@ -1,4 +1,4 @@
-package easy;
+package com.shenghaishxt.easy;
 
 public class _0028 {
     private int strStr(String haystack, String needle) {
