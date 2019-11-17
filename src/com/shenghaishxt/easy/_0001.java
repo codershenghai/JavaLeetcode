@@ -1,7 +1,9 @@
 package com.shenghaishxt.easy;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
 
 public class _0001 {
     // 暴力法
@@ -16,15 +18,15 @@ public class _0001 {
         return null;
     }
 
-    // hashtable
+    // HashMap
     private int[] twoSum2(int[] nums, int target) {
-        Hashtable ht = new Hashtable();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            ht.put(nums[i], i);
+            map.put(nums[i], i);
         }
         for (int i = 0; i < nums.length; i++) {
-            if (ht.containsKey(target - nums[i]) && i != (int)ht.get(target-nums[i])) {
-                return new int[] {i, (int)ht.get(target-nums[i])};
+            if (map.containsKey(target - nums[i]) && i != map.get(target-nums[i])) {
+                return new int[] {i, map.get(target-nums[i])};
             }
         }
         return null;
