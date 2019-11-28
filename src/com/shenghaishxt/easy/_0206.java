@@ -25,7 +25,6 @@ public class _0206 {
         // 3.本级递归应该做什么
         head.next.next = head;
         head.next = null;
-
         return p;
     }
 
