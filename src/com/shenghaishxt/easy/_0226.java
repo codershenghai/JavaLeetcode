@@ -1,6 +1,5 @@
 package com.shenghaishxt.easy;
 
-import com.shenghaishxt.structure.ListNode;
 import com.shenghaishxt.structure.TreeNode;
 
 import java.util.LinkedList;
@@ -42,6 +41,5 @@ public class _0226 {
             if (cur.right != null)
                 queue.offer(cur.right);
         }
-
     }
 }
