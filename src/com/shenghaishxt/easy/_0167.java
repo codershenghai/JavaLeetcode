@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-// 和_0001不同之处在于：本题的输入数组是升序排列的，而_0001的输入数组不是
+// 和_0001不同之处在于：本题的输入数组是升序排列的，而_0001的输入数组没有限定是升序排列或是降序排列
 public class _0167 {
     private int[] twoSum1(int[] numbers, int target) {
         for (int i = 0; i < numbers.length; i++) {
