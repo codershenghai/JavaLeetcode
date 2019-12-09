@@ -1,7 +1,5 @@
 package com.shenghaishxt.easy;
 
-import java.util.Arrays;
-
 public class _0152 {
     private int maxProduct(int[] nums) {
         int max_val = nums[0];
