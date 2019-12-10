@@ -1,4 +1,4 @@
-package com.shenghaishxt.easy;
+package com.shenghaishxt.medium;
 
 public class _0322 {
     private int coinChange(int[] coins, int amount) {

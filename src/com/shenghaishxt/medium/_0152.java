@@ -1,4 +1,4 @@
-package com.shenghaishxt.easy;
+package com.shenghaishxt.medium;
 
 public class _0152 {
     private int maxProduct(int[] nums) {
