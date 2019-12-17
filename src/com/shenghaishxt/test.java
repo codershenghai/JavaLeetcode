@@ -4,14 +4,9 @@ import java.util.*;
 
 public class test {
     public static void main(String[] args) {
-        List<List<Integer>> ansList = new ArrayList<>();
-        ansList.add(new ArrayList<>());
-        ansList.get(0).add(1);
-
-        ansList.add(new ArrayList<>());
-        ansList.get(1).add(2);
-        ansList.get(1).add(2);
-
-        System.out.println(ansList);
+        List<String> wordDict = new ArrayList<>();
+        wordDict.add("leet");
+        wordDict.add("code");
+        System.out.println(wordDict.contains("le"));
     }
 }
