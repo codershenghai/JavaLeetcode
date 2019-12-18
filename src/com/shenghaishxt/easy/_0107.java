@@ -1,6 +1,5 @@
 package com.shenghaishxt.easy;
 
-import com.shenghaishxt.medium._0102;
 import com.shenghaishxt.structure.TreeNode;
 
 import java.util.ArrayList;
