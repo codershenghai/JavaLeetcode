@@ -34,6 +34,10 @@ public class _0107 {
         return ansList;
     }
 
+    /**
+     * DFS深度优先搜索(递归)
+     * 和_0102类似，从头添加数组即可。
+     */
     private List<List<Integer>> levelOrderBottomDFS(TreeNode root) {
         List<List<Integer>> ansList = new ArrayList<>();
         DFS(root, 0, ansList);
