@@ -14,6 +14,7 @@ public class _0051 {
      *         return
      *
      *     for 选择 in 选择列表:
+     *         (剪枝)
      *         做选择
      *         backtrack(路径, 选择列表)
      *         撤销选择
@@ -35,7 +36,7 @@ public class _0051 {
     }
 
     private void backTrack(List<StringBuilder> board, int row) {
-        // 结束的条件
+        // 递归结束的条件
         if (row == board.size()) {
             List<String> tmp = new ArrayList<>();
             for (StringBuilder i : board)
