@@ -64,7 +64,7 @@ public class _0052 {
 
     public static void main(String[] args) {
         _0052 Sol = new _0052();
-        int n = 8;
+        int n = 4;
         System.out.println(Sol.totalNQueens(n));
     }
 }
