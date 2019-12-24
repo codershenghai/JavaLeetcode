@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-// 本题的输入数组没有限定是升序排列或是降序排列，因此不能用首尾指针法
+// 输入的整数数组不是有序的，而且需要返回下标，因此不能用双指针法。
 public class _0001 {
     // 暴力法
     private int[] twoSum1(int[] nums, int target) {
@@ -33,7 +33,7 @@ public class _0001 {
 
     public static void main(String[] args) {
         _0001 Sol = new _0001();
-        int[] res = Sol.twoSum2(new int[] {2, 7, 11, 15}, 9);
+        int[] res = Sol.twoSum1(new int[] {2, 7, 11, 15}, 9);
         System.out.println(Arrays.toString(res));
     }
 }
