@@ -6,8 +6,8 @@ public class _0015 {
     // 排序+双指针
     private List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
-        Arrays.sort(nums);
         int len = nums.length;
+        Arrays.sort(nums);
         for (int i = 0; i < len; i++) {
             // 若当前数字大于0，则三数一定大于0
             if (nums[i] > 0)
