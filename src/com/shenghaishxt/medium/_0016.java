@@ -14,19 +14,14 @@ public class _0016 {
                 int sum = nums[i] + nums[left] + nums[right];
                 if (Math.abs(target - sum) < Math.abs(target - dist))
                     dist = sum;
-
-                if (sum - target > 0) {
-                    if (sum - target < dist) {
-                        res = sum;
-                        right--;
-                    }
-                }
+                if (sum - target > 0)
+                    right--;
                 else if (sum - target < 0)
                     left++;
                 else return sum;
             }
         }
-        return res;
+        return dist;
     }
 
     public static void main(String[] args) {
