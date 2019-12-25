@@ -7,23 +7,43 @@ import java.util.List;
 public class _0018 {
     private List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
-        Arrays.sort(nums);
         int len = nums.length;
-        for (int i = 0; i < len; i++) {
-            // 剪枝 and 去重
-            if (nums[i] > target)
-                break;
+        if (len < 4)
+            return res;
+
+        Arrays.sort(nums);
+        for (int i = 0; i < len-3; i++) {
+            // 当i的值与前面的值相等时忽略
             if (i > 0 && nums[i] == nums[i-1])
                 continue;
+            // 获取当前最小值，如果最小值比目标值大，说明后面越来越大的值全都比最大值大
+            int minValue = nums[i] + nums[i+1] + nums[i+2] + nums[i+3];
+            if (minValue > target)
+                break;
 
-            for (int j = i+1; j < len; j++) {
-                // 剪枝 and 去重
-                if (nums[j] > target)
-                    break;
-                if (j > 1 && nums[j] == nums[j-1])
+            // 获取当前最大值，如果最大值比目标值小，则continue
+            int maxValue = nums[i] + nums[len-1] + nums[len-2] + nums[len-3];
+            if (maxValue < target)
+                continue;
+
+            for (int j = i+1; j < len-2; j++) {
+                // 当j的值与前面的值相等时忽略
+                if (j > i+1 && nums[j] == nums[j-1])
                     continue;
 
                 int left = j+1, right = len-1;
+
+                // 获取当前最小值，如果最小值比目标值大，说明后面越来越大的值全都比最大值大
+                minValue = nums[i] + nums[j] + nums[left] + nums[left+1];
+                if (minValue > target)
+                    continue; // break
+
+                // 获取当前最大值，如果最大值比目标值小，则continue
+                maxValue = nums[i] + nums[j] + nums[right] + nums[right-1];
+                if (maxValue < target)
+                    continue;
+
+                // left和right开始表演
                 while (left < right) {
                     int sum = nums[i] + nums[j] + nums[left] + nums[right];
                     if (sum < target)
@@ -32,12 +52,14 @@ public class _0018 {
                         right--;
                     else {
                         res.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
-                        while (left < right && nums[left] == nums[left+1])
-                            left++;
-                        while (left < right && nums[right] == nums[right-1])
-                            right--;
                         left++;
+                        while (left < right && nums[left] == nums[left-1]) {
+                            left++;
+                        }
                         right--;
+                        while (left < right && i < right && nums[right] == nums[right+1]) {
+                            right--;
+                        }
                     }
                 }
             }
@@ -47,9 +69,13 @@ public class _0018 {
 
     public static void main(String[] args) {
         _0018 Sol = new _0018();
-        int[] nums = {0,0,0,0};
+        int[] nums = {-3,-2,-1,0,0,1,2,3};  //8
         int target = 0;
+
+//        int[] nums = {-1,0,-5,-2,-2,-4,0,1,-2};  //4
+//        int target = -9;
+
         List<List<Integer>> res = Sol.fourSum(nums, target);
-        System.out.println(res);
+        System.out.println(res.size());
     }
 }
