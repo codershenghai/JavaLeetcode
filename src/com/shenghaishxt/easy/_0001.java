@@ -6,7 +6,7 @@ import java.util.Map;
 
 // 输入的整数数组不是有序的，而且需要返回下标，因此不能用双指针法。
 public class _0001 {
-    // 暴力法
+    // 暴力 时间复杂度O(n^2), 空间复杂度O(1)
     private int[] twoSum1(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i+1; j < nums.length; j++) {
@@ -18,7 +18,7 @@ public class _0001 {
         return null;
     }
 
-    // HashMap
+    // HashMap 时间复杂度O(n), 空间复杂度O(n)
     private int[] twoSum2(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
