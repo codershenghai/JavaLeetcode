@@ -6,7 +6,7 @@ import java.util.Map;
 
 // 和_0001不同之处在于：本题的输入数组是升序排列的，而_0001的输入数组没有限定是升序排列或是降序排列
 public class _0167 {
-    // 暴力
+    // 暴力 时间复杂度O(n^2), 空间复杂度O(1)
     private int[] twoSum1(int[] numbers, int target) {
         for (int i = 0; i < numbers.length; i++) {
             for (int j = i+1; j < numbers.length; j++) {
@@ -17,7 +17,7 @@ public class _0167 {
         return null;
     }
 
-    // 哈希表
+    // 哈希表 时间复杂度O(n), 空间复杂度O(n)
     private int[] twoSum2(int[] numbers, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
@@ -30,7 +30,7 @@ public class _0167 {
         return null;
     }
 
-    // 双指针
+    // 双指针 时间复杂度O(n), 空间复杂度O(1)
     private int[] twoSum3(int[] numbers, int target) {
         int head = 0, tail = numbers.length-1;
         while (numbers[head] + numbers[tail] != target) {
