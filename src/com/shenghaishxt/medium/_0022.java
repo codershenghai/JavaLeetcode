@@ -23,7 +23,6 @@ public class _0022 {
     private List<String> generateParenthesis(int n) {
         if (n == 0)
             return res;
-
         backTrack("", n, n);
         return res;
     }
