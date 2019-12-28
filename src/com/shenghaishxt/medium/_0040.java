@@ -22,11 +22,11 @@ public class _0040 {
         if (candidates.length == 0)
             return new ArrayList<>();
         Arrays.sort(candidates);
-        backTrack(new ArrayList<>(), candidates, target, 0);
+        backTrack(new Stack<>(), candidates, target, 0);
         return res;
     }
 
-    private void backTrack(ArrayList<Integer> cur, int[] candidates, int residue, int begin) {
+    private void backTrack(Stack<Integer> cur, int[] candidates, int residue, int begin) {
         if (residue == 0) {
             res.add(new ArrayList<>(cur));
             return;
@@ -35,9 +35,9 @@ public class _0040 {
         for (int i = begin; i < candidates.length && residue-candidates[i] >= 0; i++) {
             if (i > begin && candidates[i] == candidates[i-1])
                 continue;
-            cur.add(candidates[i]);
+            cur.push(candidates[i]);
             backTrack(cur, candidates, residue-candidates[i], i+1);
-            cur.remove(cur.size()-1);
+            cur.pop();
         }
     }
 
