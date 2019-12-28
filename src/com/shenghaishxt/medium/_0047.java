@@ -24,8 +24,9 @@ public class _0047 {
         }
 
         for (int i = 0; i < nums.length; i++) {
+            // 用过的位置直接剪枝
             if (!used[i]) {
-                // 剪枝的效果是去重
+                // 当nums[i-1]和nums[i]的值相等，且nums[i-1]被用过时剪枝
                 if (i > 0 && nums[i] == nums[i-1] && used[i-1])
                     continue;
                 used[i] = true;
