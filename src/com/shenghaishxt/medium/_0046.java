@@ -46,6 +46,7 @@ class Permute1 {
 }
 
 class Permute2 {
+    // 回溯法 = dfs+状态重置+剪枝
     // 参考 https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/
     private List<List<Integer>> res = new ArrayList<>();
 
