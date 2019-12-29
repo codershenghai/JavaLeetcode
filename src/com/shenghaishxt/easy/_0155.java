@@ -44,12 +44,12 @@ class MinStack {
     private Stack<Integer> stack;
     private Stack<Integer> assist_stack;
 
-    public MinStack() {
+    MinStack() {
         stack = new Stack<>();
         assist_stack = new Stack<>();
     }
 
-    public void push(int x) {
+    void push(int x) {
         if (stack.empty() || x <= assist_stack.peek()) {
             stack.push(x);
             assist_stack.push(x);
@@ -58,18 +58,18 @@ class MinStack {
         }
     }
 
-    public void pop() {
+    void pop() {
         if (stack.peek().equals(assist_stack.peek())) {
             stack.pop();
             assist_stack.pop();
         } else stack.pop();
     }
 
-    public int top() {
+    int top() {
         return stack.peek();
     }
 
-    public int getMin() {
+    int getMin() {
         return assist_stack.peek();
     }
 
