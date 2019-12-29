@@ -54,11 +54,11 @@ class Permute2 {
         if (nums.length == 0)
             return res;
         boolean[] visited = new boolean[nums.length];
-        dfs(nums, new Stack<>(), visited);
+        dfs(new Stack<>(), nums, visited);
         return res;
     }
 
-    private void dfs(int[] nums, Stack<Integer> path, boolean[] visited) {
+    private void dfs(Stack<Integer> path, int[] nums,  boolean[] visited) {
         if (path.size() == nums.length) {
             res.add(new ArrayList<>(path));
             return;
@@ -67,7 +67,7 @@ class Permute2 {
             if (!visited[i]) {
                 path.push(nums[i]);
                 visited[i] = true;
-                dfs(nums, path, visited);
+                dfs(path, nums, visited);
                 path.pop();
                 visited[i] = false;
             }
