@@ -1,4 +1,4 @@
-package com.shenghaishxt.hard;
+package com.shenghaishxt.medium;
 
 public class _0079 {
     private boolean exist(char[][] board, String word) {
