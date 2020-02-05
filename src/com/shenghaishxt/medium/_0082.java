@@ -10,7 +10,7 @@ public class _0082 {
         while (head != null && head.next != null) {
             if (head.val != head.next.val) {
                 pre = head;
-                head = head.next;
+                head = pre.next;
             } else {
                 while (head.next != null && head.val == head.next.val)
                     head = head.next;
@@ -26,8 +26,8 @@ public class _0082 {
         ListNode head = new ListNode(1);
         head.next = new ListNode(1);
         head.next.next = new ListNode(1);
-        head.next.next.next = new ListNode(2);
-        head.next.next.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(1);
+        head.next.next.next.next = new ListNode(1);
         ListNode res = Sol.deleteDuplicates(head);
 
         while (res != null) {
