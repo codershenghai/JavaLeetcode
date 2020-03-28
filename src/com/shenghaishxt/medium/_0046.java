@@ -34,7 +34,7 @@ class Permute1 {
             return;
         }
         for (int num : nums) {
-            //剪枝
+            // 这种剪枝方法对于测试用例是[1,1]的返回结果为空
             if (track.contains(num))
                 continue;
 

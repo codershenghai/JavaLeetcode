@@ -4,7 +4,7 @@ import com.shenghaishxt.structure.TreeNode;
 
 
 public class _0110 {
-    private boolean isBalanced(TreeNode root) {
+    private boolean isBalanced1(TreeNode root) {
         // 1.递归终止的条件
         if (root == null)
             return true;
@@ -14,8 +14,8 @@ public class _0110 {
         int right_depth = maxDepth(root.right);
         int abs_depth = Math.abs(left_depth - right_depth);
 
-        boolean left_isB = isBalanced(root.left);
-        boolean right_isB = isBalanced(root.right);
+        boolean left_isB = isBalanced1(root.left);
+        boolean right_isB = isBalanced1(root.right);
 
         // 3.本级递归应该做什么
         return abs_depth<=1 && left_isB && right_isB;
@@ -25,6 +25,20 @@ public class _0110 {
         if (root == null)
             return 0;
         return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    }
+
+    public boolean isBalanced2(TreeNode root) {
+        return GetDepth(root) != -1;
+    }
+
+    private int GetDepth(TreeNode node) {
+        if (node == null)
+            return 0;
+        int left = GetDepth(node.left);
+        if (left == -1) return -1; // 剪枝
+        int right = GetDepth(node.right);
+        if (right == -1) return -1; // 剪枝
+        return Math.abs(left-right)>1 ? -1 : Math.max(left, right)+1;
     }
 
     public static void main(String[] args) {
@@ -37,6 +51,6 @@ public class _0110 {
         root.left.left.left = new TreeNode(4);
         root.left.left.right = new TreeNode(4);
 
-        System.out.println(Sol.isBalanced(root));
+        System.out.println(Sol.isBalanced1(root));
     }
 }
