@@ -3,6 +3,7 @@ package com.shenghaishxt.medium;
 import com.shenghaishxt.structure.ListNode;
 
 public class _0061 {
+    // 思路是找到旋转后的头结点，将链表分为两半，然后重组链表
     // 1.先移到最后，用tail保存原链表的尾节点，顺便求出链表长度，并对k取余。
     // 2.求倒数第k+1个节点。
     // 3.将末尾连到头上。
