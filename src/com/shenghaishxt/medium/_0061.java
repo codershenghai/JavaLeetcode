@@ -3,16 +3,41 @@ package com.shenghaishxt.medium;
 import com.shenghaishxt.structure.ListNode;
 
 public class _0061 {
-    private ListNode rotateRight(ListNode head, int k) {
-        ListNode last = head;
+    // 1.先移到最后，用tail保存原链表的尾节点，顺便求出链表长度，并对k取余。
+    // 2.求倒数第k+1个节点。
+    // 3.将末尾连到头上。
+    // 4.设置倒数第k+1个节点的next为头结点，然后设置倒数第k+1个节点的next为空。
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null)
+            return null;
+
+        // 1.先移到最后，用tail保存原链表的尾节点，顺便求出链表长度，并对k取余。
+        ListNode tail = head;
         int length = 1;
-        while (last.next != null) {
-            last = last.next;
+        while (tail.next != null) {
+            tail = tail.next;
             length++;
         }
-        last.next = head;
+        k = k % length;
 
-        return last;
+        // 2.求倒数第k+1个节点。
+        ListNode p = head, pHelper = head;
+        while (k-- >= 0) {
+            assert pHelper != null;
+            pHelper = pHelper.next;
+        }
+        while (pHelper != null) {
+            p = p.next;
+            pHelper = pHelper.next;
+        }
+
+        // 3.将末尾连到头上。
+        tail.next = head;
+
+        // 4.设置倒数第k+1个节点的next为头结点，然后设置倒数第k+1个节点的next为空，最后返回头结点。
+        head = p.next;
+        p.next = null;
+        return head;
     }
 
     public static void main(String[] args) {
