@@ -9,7 +9,7 @@ public class _0008 {
     // 3.判断第一个字符是不是负号，如果是的话，保存标志
     // 4.开始遍历数字，使用 -'0'或Character.digit()得到数字，使用Math.addExact和try catch判断整型溢出
     // 5.如果不是数字，就结束这个过程，返回答案
-    public int myAtoi(String str) {
+    public int myAtoi1(String str) {
         if (str.equals(""))
             return 0;
         int index = 0, res = 0;
@@ -69,6 +69,6 @@ public class _0008 {
     public static void main(String[] args) {
         _0008 Sol = new _0008();
         String str = "42";
-        System.out.println(Sol.myAtoi(str));
+        System.out.println(Sol.myAtoi1(str));
     }
 }
