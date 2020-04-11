@@ -3,7 +3,7 @@ package com.shenghaishxt.medium;
 import com.shenghaishxt.structure.ListNode;
 
 public class _0086 {
-    // 将这个链表重新串一遍
+    // 将这个链表重新串一遍，左边是小于x的节点，右边是大于等于x的节点
     public ListNode partition(ListNode head, int x) {
         ListNode minList = new ListNode(0);
         ListNode maxList = new ListNode(0);
