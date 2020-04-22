@@ -19,6 +19,8 @@ public class _0051 {
      *         backtrack(路径, 选择列表)
      *         撤销选择
      */
+
+    // 初始化一个棋盘，然后尝试对每一行设置皇后，将可行解存到res中
     private List<List<String>> res = new ArrayList<>();
 
     private List<List<String>> solveNQueens(int n) {
