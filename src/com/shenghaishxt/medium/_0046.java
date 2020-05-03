@@ -77,7 +77,7 @@ class Permute2 {
 
 public class _0046 {
     public static void main(String[] args) {
-        Permute2 Sol = new Permute2();
+        Permute1 Sol = new Permute1();
         int[] nums = new int[] {1,2,3};
         List<List<Integer>> res = Sol.permute(nums);
         System.out.println(res);
