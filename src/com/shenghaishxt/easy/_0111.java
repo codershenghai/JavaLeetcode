@@ -2,6 +2,9 @@ package com.shenghaishxt.easy;
 
 import com.shenghaishxt.structure.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class _0111 {
     /*
     注意事项：
@@ -24,6 +27,30 @@ public class _0111 {
             return minDepth(root.left) + 1;
         else
             return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
+    }
+
+    // BFS 框架，推荐用第二种方法
+    public int minDepth2(TreeNode root) {
+        if (root == null) return 0;
+
+        Deque<TreeNode> deque = new ArrayDeque<>();
+        deque.addLast(root);
+        int depth = 0;
+
+        while (!deque.isEmpty()) {
+            int size = deque.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = deque.pollFirst();
+
+                // 判断是否达到重点
+                if (cur.left == null && cur.right == null)
+                    return depth+1;
+                if (cur.left != null) deque.addLast(cur.left);
+                if (cur.right != null) deque.addLast(cur.right);
+            }
+            depth++;
+        }
+        return depth;
     }
 
     public static void main(String[] args) {
