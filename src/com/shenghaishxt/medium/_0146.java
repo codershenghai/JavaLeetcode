@@ -39,10 +39,12 @@ class LRUCache {
         Node node = map.get(key);
         node.prev.next = node.next;
         node.next.prev = node.prev;
+
         node.next = dummyHead.next;
         node.prev = dummyHead;
         dummyHead.next.prev = node;
         dummyHead.next = node;
+
         return node.val;
     }
 
@@ -52,10 +54,12 @@ class LRUCache {
             Node node = map.get(key);
             node.prev.next = node.next;
             node.next.prev = node.prev;
+
             node.next = dummyHead.next;
             node.prev = dummyHead;
             dummyHead.next.prev = node;
             dummyHead.next = node;
+
             node.val = value;
         } else {
             // 如果缓存满了，就删除链表最后一个缓存，同时将哈希表中对应node也删除
