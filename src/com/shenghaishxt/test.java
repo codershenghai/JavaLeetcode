@@ -1,9 +1,10 @@
 package com.shenghaishxt;
 
-import java.util.*;
+import com.shenghaishxt.structure.ListNode;
 
 public class test {
     public static void main(String[] args) {
-        System.out.println(1 << 1);
+        ListNode a = new ListNode(1);
+        System.out.println(a);
     }
 }
