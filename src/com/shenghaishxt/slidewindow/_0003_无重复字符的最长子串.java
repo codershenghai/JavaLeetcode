@@ -1,9 +1,7 @@
 package com.shenghaishxt.slidewindow;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class _0003_无重复字符的最长子串 {
     public int lengthOfLongestSubstring(String s) {
