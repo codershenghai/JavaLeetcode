@@ -1,7 +1,8 @@
-package com.shenghaishxt.easy;
+package com.shenghaishxt.leetcode;
 
-public class _0009 {
-    private boolean isPalindrome(int x) {
+public class _0009_回文数 {
+    // 将x倒序，检查倒序的x和原来的x是否相等
+    public boolean isPalindrome(int x) {
         if (x < 0)
             return false;
         int num = x;
@@ -14,7 +15,7 @@ public class _0009 {
     }
 
     public static void main(String[] args) {
-        _0009 Sol = new _0009();
+        _0009_回文数 Sol = new _0009_回文数();
         boolean res = Sol.isPalindrome(10);
         System.out.println(res);
     }

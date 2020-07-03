@@ -1,7 +1,7 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
-public class _0005 {
-    // 从中间开始向两边扩散来判断回文串
+public class _0005_最长回文子串 {
+    // 中心扩散法
     private String longestPalindrome(String s) {
         String res = "";
         for (int i = 0; i < s.length(); i++) {
@@ -13,7 +13,6 @@ public class _0005 {
         return res;
     }
 
-    // 向两边展开
     private String palindrome(String s, int left, int right) {
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
             left--;
@@ -23,7 +22,7 @@ public class _0005 {
     }
 
     public static void main(String[] args) {
-        _0005 Sol = new _0005();
+        _0005_最长回文子串 Sol = new _0005_最长回文子串();
         String s = "babad";
         System.out.println(Sol.longestPalindrome(s));
     }

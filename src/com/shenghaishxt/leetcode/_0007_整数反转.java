@@ -1,7 +1,7 @@
-package com.shenghaishxt.easy;
+package com.shenghaishxt.leetcode;
 
-public class _0007 {
-    private int reverse(int x) {
+public class _0007_整数反转 {
+    public int reverse(int x) {
         int ans = 0;
         while (x != 0) {
             int pop = x % 10;
@@ -16,7 +16,7 @@ public class _0007 {
     }
 
     public static void main(String[] args) {
-        _0007 Sol = new _0007();
+        _0007_整数反转 Sol = new _0007_整数反转();
         int res = Sol.reverse(1534236469);
         System.out.println(res);
     }

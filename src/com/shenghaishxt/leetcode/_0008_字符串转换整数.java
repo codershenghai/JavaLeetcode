@@ -1,9 +1,9 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class _0008 {
+public class _0008_字符串转换整数 {
     // 1.跳过前面的空格（如果有的话）
     // 2.判断第一个字符是不是正号，如果是的话，其后一定要接数字
     // 3.判断第一个字符是不是负号，如果是的话，保存标志
@@ -67,7 +67,7 @@ public class _0008 {
     }
 
     public static void main(String[] args) {
-        _0008 Sol = new _0008();
+        _0008_字符串转换整数 Sol = new _0008_字符串转换整数();
         String str = "42";
         System.out.println(Sol.myAtoi1(str));
     }

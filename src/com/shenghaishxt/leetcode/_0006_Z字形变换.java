@@ -1,8 +1,9 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 
-public class _0006 {
-    private String convert(String s, int numRows) {
+public class _0006_Z字形变换 {
+
+    public String convert(String s, int numRows) {
         if (s.length() == 0)
             return "";
         StringBuilder[] rows = new StringBuilder[numRows];
@@ -26,7 +27,7 @@ public class _0006 {
     }
 
     public static void main(String[] args) {
-        _0006 Sol = new _0006();
+        _0006_Z字形变换 Sol = new _0006_Z字形变换();
         String input = "AB";
         int numRows = 1;
         System.out.println(Sol.convert(input, numRows));

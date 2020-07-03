@@ -1,11 +1,11 @@
-package com.shenghaishxt.easy;
+package com.shenghaishxt.leetcode;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-// 输入的整数数组不是有序的，而且需要返回下标，因此不能用双指针法。
-public class _0001 {
+public class _0001_两数之和 {
+    // 输入的整数数组不是有序的，而且需要返回下标，因此不能用双指针法。
     // 暴力 时间复杂度O(n^2), 空间复杂度O(1)
     private int[] twoSum1(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
@@ -32,7 +32,7 @@ public class _0001 {
     }
 
     public static void main(String[] args) {
-        _0001 Sol = new _0001();
+        _0001_两数之和 Sol = new _0001_两数之和();
         int[] res = Sol.twoSum1(new int[] {2, 7, 11, 15}, 9);
         System.out.println(Arrays.toString(res));
     }

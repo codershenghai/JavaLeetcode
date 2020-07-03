@@ -1,7 +1,7 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 import com.shenghaishxt.structure.ListNode;
 
-public class _0002 {
+public class _0002_两数相加 {
     // 模拟加法进位相加，如果一个链表较短则在前面补0
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
@@ -33,7 +33,7 @@ public class _0002 {
 //        l2.next = new ListNode(6);
 //        l2.next.next = new ListNode(4);
 
-        _0002 Sol = new _0002();
+        _0002_两数相加 Sol = new _0002_两数相加();
         ListNode res = Sol.addTwoNumbers(l1, l2);
         System.out.println();
     }
