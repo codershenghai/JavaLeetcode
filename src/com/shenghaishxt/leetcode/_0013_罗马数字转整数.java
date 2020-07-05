@@ -1,8 +1,10 @@
-package com.shenghaishxt.easy;
+package com.shenghaishxt.leetcode;
 
 import java.util.HashMap;
 
-public class _0013 {
+public class _0013_罗马数字转整数 {
+    // 罗马数字包含七种字符：I， V， X， L，C，D 和 M
+    // 将这七种字符和六种特例存储进哈希表
     // 一次判断两个字母，遍历一遍即可
     private int romanToInt(String s) {
         HashMap<String, Integer> map = new HashMap<>();
@@ -36,7 +38,7 @@ public class _0013 {
     }
 
     public static void main(String[] args) {
-        _0013 Sol = new _0013();
+        _0013_罗马数字转整数 Sol = new _0013_罗马数字转整数();
         System.out.println(Sol.romanToInt("LVIII"));
     }
 }

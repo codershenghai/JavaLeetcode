@@ -1,4 +1,4 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.List;
  *         backtrack(路径, 选择列表)
  *         撤销选择
  */
-public class _0017 {
+public class _0017_电话号码的字母组合 {
     private String[] letterMap = {
             "",
             "",
@@ -30,7 +30,7 @@ public class _0017 {
             "wxyz"  //9
     };
     private List<String> res = new ArrayList<>();
-    private List<String> letterCombinations(String digits) {
+    public List<String> letterCombinations(String digits) {
         if (digits.equals(""))
             return res;
         StringBuilder sb = new StringBuilder();
@@ -53,7 +53,7 @@ public class _0017 {
     }
 
     public static void main(String[] args) {
-        _0017 Sol = new _0017();
+        _0017_电话号码的字母组合 Sol = new _0017_电话号码的字母组合();
         String digits = "23";
         System.out.println(Sol.letterCombinations(digits));
     }

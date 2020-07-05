@@ -1,10 +1,10 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import java.util.*;
 
-public class _0015 {
+public class _0015_三数之和 {
     // 排序+双指针
-    private List<List<Integer>> threeSum(int[] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         int len = nums.length;
         Arrays.sort(nums);
@@ -42,7 +42,7 @@ public class _0015 {
     }
 
     public static void main(String[] args) {
-        _0015 Sol = new _0015();
+        _0015_三数之和 Sol = new _0015_三数之和();
         int[] nums = {0,0,0,0};
         List<List<Integer>> res = Sol.threeSum(nums);
         System.out.println(res);

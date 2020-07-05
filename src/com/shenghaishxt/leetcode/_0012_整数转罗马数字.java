@@ -1,8 +1,10 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import java.util.HashMap;
 
-public class _0012 {
+public class _0012_整数转罗马数字 {
+    // 罗马数字包含七种字符：I， V， X， L，C，D 和 M
+    // 将这七种字符和六种特例按照从大到小的顺序存储进数组
     private String intToRoman(int num) {
         HashMap<Integer, String> map = new HashMap<>();
         int[] values = {1000,900,500,400,100,90,50,40,10,9,5,4,1};
@@ -20,7 +22,7 @@ public class _0012 {
     }
 
     public static void main(String[] args) {
-        _0012 Sol = new _0012();
+        _0012_整数转罗马数字 Sol = new _0012_整数转罗马数字();
         int num = 9;
         String res = Sol.intToRoman(num);
         System.out.println(res);

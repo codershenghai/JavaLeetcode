@@ -1,10 +1,10 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import java.util.Arrays;
 
-public class _0016 {
-    // 排序+双指针
-    private int threeSumClosest(int[] nums, int target) {
+public class _0016_最接近的三数之和 {
+    // 类似于题15，也是使用排序+双指针
+    public int threeSumClosest(int[] nums, int target) {
         int dist = nums[0] + nums[1] + nums[2];
         int len = nums.length;
         Arrays.sort(nums);
@@ -25,7 +25,7 @@ public class _0016 {
     }
 
     public static void main(String[] args) {
-        _0016 Sol = new _0016();
+        _0016_最接近的三数之和 Sol = new _0016_最接近的三数之和();
         int[] nums = {1,1,-1};
         int target = 2;
         System.out.println(Sol.threeSumClosest(nums, target));

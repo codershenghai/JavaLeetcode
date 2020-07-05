@@ -1,16 +1,15 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class _0018 {
-    private List<List<Integer>> fourSum(int[] nums, int target) {
+public class _0018_四数之和 {
+    // 排序+两层循环+双指针
+    public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         int len = nums.length;
-        if (len < 4)
-            return res;
-
+        if (len < 4) return res;
         Arrays.sort(nums);
         for (int i = 0; i < len-3; i++) {
             // 当i的值与前面的值相等时忽略
@@ -68,7 +67,7 @@ public class _0018 {
     }
 
     public static void main(String[] args) {
-        _0018 Sol = new _0018();
+        _0018_四数之和 Sol = new _0018_四数之和();
         int[] nums = {-3,-2,-1,0,0,1,2,3};  //8
         int target = 0;
 

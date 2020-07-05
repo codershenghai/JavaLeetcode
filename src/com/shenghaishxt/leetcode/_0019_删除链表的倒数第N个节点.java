@@ -1,10 +1,11 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import com.shenghaishxt.structure.ListNode;
 
-public class _0019 {
-    // 两次遍历
-    private ListNode removeNthFromEnd1(ListNode head, int n) {
+public class _0019_删除链表的倒数第N个节点 {
+    // 两次遍历，第一次遍历得到链表长度，从而计算出倒数第N个节点是正数的第几个节点。
+    // 然后第二次遍历将这个节点删除。
+    public ListNode removeNthFromEnd1(ListNode head, int n) {
         int length = 0;
         ListNode p = head;
         while (p != null) {
@@ -26,8 +27,8 @@ public class _0019 {
         return dummy.next;
     }
 
-    // 一次遍历(使用两个指针保持恒定的间隔)
-    private ListNode removeNthFromEnd2(ListNode head, int n) {
+    // 一次遍历(快慢指针)
+    public ListNode removeNthFromEnd2(ListNode head, int n) {
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
         ListNode left = dummy, right = dummy;
@@ -43,15 +44,14 @@ public class _0019 {
     }
 
     public static void main(String[] args) {
-        _0019 Sol = new _0019();
+        _0019_删除链表的倒数第N个节点 Sol = new _0019_删除链表的倒数第N个节点();
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        int n = 5;
-        ListNode res = Sol.removeNthFromEnd2(head, n);
+        ListNode res = Sol.removeNthFromEnd2(head, 5);
         while (res != null) {
             System.out.println(res.val);
             res = res.next;

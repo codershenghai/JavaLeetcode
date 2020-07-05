@@ -1,4 +1,4 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +16,12 @@ import java.util.List;
  *         backtrack(路径, 选择列表)
  *         撤销选择
  */
-public class _0022 {
+public class _0022_括号生成 {
 
     private List<String> res = new ArrayList<>();
 
-    private List<String> generateParenthesis(int n) {
-        if (n == 0)
-            return res;
+    public List<String> generateParenthesis(int n) {
+        if (n == 0) return res;
         backTrack("", n, n);
         return res;
     }
@@ -33,14 +32,12 @@ public class _0022 {
             return;
         }
         // 不需要for循环，因为选择列表中只有left和right
-        if (left > 0)
-            backTrack(cur+"(", left-1, right);
-        if (right > 0 && left < right)
-            backTrack(cur+")", left, right-1);
+        if (left > 0) backTrack(cur+"(", left-1, right);
+        if (right > 0 && left < right) backTrack(cur+")", left, right-1);
     }
 
     public static void main(String[] args) {
-        _0022 Sol = new _0022();
+        _0022_括号生成 Sol = new _0022_括号生成();
         int n = 3;
         List<String> res = Sol.generateParenthesis(n);
         System.out.println(res);
