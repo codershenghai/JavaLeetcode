@@ -1,8 +1,10 @@
-package com.shenghaishxt.medium;
+package com.shenghaishxt.leetcode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class _0031 {
+public class _0031_下一个排列 {
     public void nextPermutation(int[] nums) {
         if (nums.length < 2)
             return;
@@ -44,11 +46,15 @@ public class _0031 {
     }
 
     public static void main(String[] args) {
-        new _0031().nextPermutation(new int[]{1,3,2}); //[2,1,3]
-        new _0031().nextPermutation(new int[]{5,1,1}); //[1,1,5]
-        new _0031().nextPermutation(new int[]{2,3,1}); //[3,1,2]
-        new _0031().nextPermutation(new int[]{3,2,1}); //[1,2,3]
-        new _0031().nextPermutation(new int[]{1,2,3,4,5,6}); //[1,2,3,4,6,5]
-        new _0031().nextPermutation(new int[]{1,5,3,2,1,6,5}); //[1,5,3,2,5,1,6]
+        new _0031_下一个排列().nextPermutation(new int[]{1,3,2}); //[2,1,3]
+        new _0031_下一个排列().nextPermutation(new int[]{5,1,1}); //[1,1,5]
+        new _0031_下一个排列().nextPermutation(new int[]{2,3,1}); //[3,1,2]
+        new _0031_下一个排列().nextPermutation(new int[]{3,2,1}); //[1,2,3]
+        new _0031_下一个排列().nextPermutation(new int[]{1,2,3,4,5,6}); //[1,2,3,4,6,5]
+        new _0031_下一个排列().nextPermutation(new int[]{1,5,3,2,1,6,5}); //[1,5,3,2,5,1,6]
+        double x = 3.0;
+        int y = 5;
+        x /= --y;
+        System.out.println(x);
     }
 }
