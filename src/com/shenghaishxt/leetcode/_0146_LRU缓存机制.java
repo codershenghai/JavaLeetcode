@@ -3,6 +3,12 @@ package com.shenghaishxt.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 直接使用双向链表无法在O(1)时间进行get操作，直接使用哈希表又无法实现顺序机制（实现LRU），
+ * 因此 ————> 哈希双向链表诞生了！它是哈希表和双向链表的结合体
+ *
+ * 双向链表的链表操作比较复杂，建议在写代码之前先在纸上画清楚逻辑，不然很容易乱
+ */
 class Node {
     public int key, val;
     public Node prev, next;

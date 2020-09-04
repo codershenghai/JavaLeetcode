@@ -36,7 +36,7 @@ public class _0072 {
 
     public static void main(String[] args) {
         _0072 Sol = new _0072();
-        String word1 = "rad", word2 = "apple";
+        String word1 = "fxpimu", word2 = "xwrs";
         System.out.println(Sol.minDistance(word1, word2));
     }
 }
